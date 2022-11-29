@@ -1,0 +1,1 @@
+This directory contains solutions to ALX SE tasks to introduction to python
