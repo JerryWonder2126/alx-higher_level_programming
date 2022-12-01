@@ -1,0 +1,11 @@
+*.swp
+__pycache__/
+*.gch
+*~
+*.out
+#*
+*/tests/*
+tests/
+*#
+.#*
+test*.c
