@@ -2,7 +2,7 @@
 
 def print_matrix_integer(matrix=[[]]):
     """Prints a two order list"""
-    for row in matrix:
-        for elem in row:
-            print("{:d}".format(elem), end=' ')
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            print("{:d}".format(matrix[i][j]), end=(' ' if j != 2 else ''))
         print()
