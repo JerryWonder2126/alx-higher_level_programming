@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     """A function that converts a Roman numeral to an integer."""
 
-    if not roman_string or type(roman_string) != str:
+    if type(roman_string) != str:
         return 0
 
     standard = {
