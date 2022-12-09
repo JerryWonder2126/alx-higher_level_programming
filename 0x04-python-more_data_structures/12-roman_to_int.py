@@ -2,7 +2,8 @@
 def roman_to_int(roman_string):
     """A function that converts a Roman numeral to an integer."""
 
-    if type(roman_string) != str:
+    flag = 0
+    if type(roman_string) != str or (not roman_string.isalpha()):
         return 0
 
     standard = {
