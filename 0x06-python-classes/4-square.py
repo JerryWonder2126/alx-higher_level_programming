@@ -12,6 +12,20 @@ class Square:
         Args:
         size (int): size for __size attribute of class instance
         """
+        self.size(self, size)
+
+    @attribute
+    def size(self):
+        """Getter for __size"""
+        return self.__size
+
+    @size.setter
+    def size(self, size):
+        """Setter for __size
+
+        Args:
+        size (int): the value to be assigned to __size
+        """
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:

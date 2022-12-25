@@ -12,9 +12,6 @@ class Square:
         Args:
         size (int): size for __size attribute of class instance
         """
-        self.set_size(self, size)
-
-    def set_size(self, size):
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
