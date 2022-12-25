@@ -1,0 +1,1 @@
+This folder contains soltuions ALX SE task on classes in python
