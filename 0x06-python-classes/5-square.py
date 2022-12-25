@@ -43,7 +43,7 @@ class Square:
         """Prints # a number of times, depending on the value of size"""
         if self.size > 0:
             for i in range(self.size):
-                for i in range(self.size):
+                for j in range(self.size):
                     print('#', end='')
                 print()
         else:
