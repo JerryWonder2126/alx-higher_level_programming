@@ -7,38 +7,34 @@ class Square:
     Attributes:
     attr1 (size): size of square
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Args:
         size (int): size for __size attribute of class instance
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
+
+    def area(self):
+        """Calculates the area based on size of square
+        Returns:
+        int: The return value. Returns the area
+        """
+        return self.__size ** 2
 
     @property
     def size(self):
-        """Getter for __size"""
+        """Gets the size of the class instance"""
         return self.__size
 
     @size.setter
-    def size(self, size):
-        """Setter for __size
-
-        Args:
-        size (int): the value to be assigned to __size
-        """
-        if type(size) != int:
+    def size(self, value):
+        """Sets the size of the class instance"""
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
-
-    def area(self):
-        """Calculates the area of the instance
-        Returns:
-        int: the area of the square
-        """
-        return self.__size**2
+        self.__size = value
 
     def my_print(self):
         """Prints in stdout the square with the # character"""
