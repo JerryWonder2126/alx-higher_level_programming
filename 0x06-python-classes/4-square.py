@@ -12,7 +12,7 @@ class Square:
         Args:
         size (int): size for __size attribute of class instance
         """
-        self.size(self, size)
+        self.__size = size
 
     @property
     def size(self):
