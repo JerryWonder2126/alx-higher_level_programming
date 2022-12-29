@@ -55,7 +55,8 @@ class SinglyLinkedList:
 
         Args:
         (int) value: the data to be used to create the node
-        (Node) next_node: a node object to be attached to the newly created node
+        (Node) next_node: a node object to be attached to the newly
+                          created node
         """
         self.__head = Node(value, next_node)
 
@@ -67,7 +68,7 @@ class SinglyLinkedList:
         """
         head = self.__head
         string = ''
-        while head != None:
+        while head:
             if head.next_node:
                 string += "{}\n".format(head.data)
             else:
