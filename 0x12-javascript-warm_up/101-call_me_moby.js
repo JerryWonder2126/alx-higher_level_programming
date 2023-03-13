@@ -5,6 +5,6 @@ const callMeMoby = (freq, callback) => {
     callback();
     freq = freq - 1;
   }
-}
+};
 
-module.exports = { callMeMoby }
+module.exports = { callMeMoby };
