@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     Represents the states table in the database
@@ -16,4 +17,3 @@ class State(Base):
 
     def __repr__(self):
         return "{} - {}".format(self.id, self.name)
-
