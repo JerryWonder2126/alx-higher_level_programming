@@ -26,8 +26,9 @@ def run():
         id ASC""", (STATE_NAME,))
         query_rows = cur.fetchall()
 
-        for row in query_rows:
-            print(row)
+        clean_result = [x[2] for x in query_rows]
+
+        print(", ".join(clean_result))
 
     conn.close()
 
