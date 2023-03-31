@@ -6,22 +6,18 @@ Usage:
 """
 import sys
 import requests
-from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28"
-    }
-    owner, repo = sys.argv[1:]
-    r = requests.get(f"https://api.github.com/repos/{owner}/{repo}/commits",
-                     headers=headers)
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
+
+    r = requests.get(url)
+    commits = r.json()
     try:
         for i in range(10):
             print("{}: {}".format(
-                r.json()[i]['sha'],
-                r.json()[i]['commit']['author']['name']
-            ))
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
     except IndexError:
         pass
