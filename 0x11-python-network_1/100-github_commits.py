@@ -17,8 +17,11 @@ if __name__ == "__main__":
     owner, repo = sys.argv[1:]
     r = requests.get(f"https://api.github.com/repos/{owner}/{repo}/commits",
                      headers=headers)
-    for obj in r.json()[:10]:
-        print("{}: {}".format(
-            obj['sha'],
-            obj['commit']['author']['name']
-        ))
+    try:
+        for i in range(10):
+            print("{}: {}".format(
+                r.json()[i]['sha'],
+                r.json()[i]['commit']['author']['name']
+            ))
+    except IndexError:
+        pass
