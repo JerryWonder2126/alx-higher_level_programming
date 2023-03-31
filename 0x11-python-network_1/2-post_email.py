@@ -7,8 +7,9 @@ email as a parameter, and displays the body of the response (decoded in utf-8)
 import sys
 import urllib
 
-data = urllib.parse.urlencode({"email": sys.argv[2]})
-data = data.encode('ascii')
-req = urllib.request.Request(sys.argv[1], data)
-with urllib.request.urlopen(req) as reponse:
-    print(body.decode('utf-8'))
+if __name__ == '__main__':
+    data = urllib.parse.urlencode({"email": sys.argv[2]})
+    data = data.encode('ascii')
+    req = urllib.request.Request(sys.argv[1], data)
+    with urllib.request.urlopen(req) as reponse:
+        print(body.read().decode('utf-8'))
