@@ -1,0 +1,1 @@
+This folder contains solution to ALX SE tasks on using python urllib package to make requests.
