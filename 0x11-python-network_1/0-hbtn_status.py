@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Makes a request to https://alx-intranet.hbtn.io/status and displays response"""
+"""
+Makes a request to https://alx-intranet.hbtn.io/status and displays response
+"""
 
 from urllib.request import urlopen
 
