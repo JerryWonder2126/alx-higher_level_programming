@@ -8,7 +8,4 @@ import sys
 from urllib.request import urlopen
 
 with urlopen(sys.argv[1]) as response:
-    headers = response.getheaders()
-    for header in headers:
-        if header[0] == 'X-Request-Id':
-            print(header[1])
+    print(dict(response.headers).get("X-Request-Id"))
